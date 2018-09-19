@@ -6,9 +6,11 @@ includes some common files used by various different packages of VieVS
 
 add the folder to your path:
 
-    addpath(genpath(path_to_common))
+    addpath(genpath('insert_path_to_common'))
 
-assuming  `path_to_common` is the path from your working directory to the COMMON directory.
+assuming  `insert_path_to_common` is the path from your working directory to the COMMON directory.
+
+It is sufficient to add this line of code at the start of your program. 
 
 ## Example 
 
