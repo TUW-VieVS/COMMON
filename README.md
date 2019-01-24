@@ -1,21 +1,30 @@
 # VieVS COMMON
 
-includes some common files used by various different packages of VieVS 
+Contains general functions used by various different packages of VieVS 
 
-# How to use it in MATLAB?
+# License
+> VieVS-COMMON: COMMON module of the Vienna VLBI and Satellite Software
+>
+> Copyright (C) 2019 TU Wien
+>
+> This program is free software: you can redistribute it and/or modify
+> it under the terms of the GNU General Public License as published by
+> the Free Software Foundation, either version 3 of the License, or
+> (at your option) any later version.
+>
+> This program is distributed in the hope that it will be useful,
+> but WITHOUT ANY WARRANTY; without even the implied warranty of
+> MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+> GNU General Public License for more details.
+>
+> You should have received a copy of the GNU General Public License
+> along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-add the folder to your path:
+# How to use it with other VieVS modules?
 
-    addpath(genpath('insert_path_to_common'))
+The COMMON folder should be placed in the same directory as the respective VieVS module. 
+If for example the VLBI module is used, the directory structure would look like this:
 
-assuming  `insert_path_to_common` is the path from your working directory to the COMMON directory.
-
-It is sufficient to add this line of code at the start of your program. 
-
-## Example 
-
-
-If your current directory is in `someFolder/MyProject/main.m` and common is stored in `someFolder/COMMON` then use:
-
-    addpath(genpath('../COMMON'))
+    VieVS/COMMON/
+    VieVS/VLBI/
     
