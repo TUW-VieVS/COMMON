@@ -251,9 +251,9 @@ TAB1=[...
 %	select case (choice)
 if opt35==1
     TAB1(42:end,:)=[];
-    disp('UT1R')
-else
-    disp('UT1S') 
+%     disp('UT1R')
+% else
+%     disp('UT1S') 
 end
 %	Correction to remove from UT1 in s
 
