@@ -26,12 +26,12 @@ function [tmu,varargout]=tai_utc(mjd,varargin)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % no announce for leap second
-mjdmax = modjuldat(2021,11,30,0);
+mjdmax = modjuldat(2022,11,30,0);
 
 % init.:
 tmu = zeros(length(mjd), 1);
 
-% display warning if time of interest is after Jan. 2016
+% display warning if time of interest is after last leap second
 if mjd > mjdmax
     disp('+++ please check for new leap second TAI-UTC tai_utc.m +++')
 end
