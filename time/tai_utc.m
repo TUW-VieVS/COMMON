@@ -26,7 +26,7 @@ function [tmu,varargout]=tai_utc(mjd,varargin)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % no announce for leap second
-mjdmax = modjuldat(2023,11,30,0);
+mjdmax = modjuldat(2024,11,30,0);
 
 % init.:
 tmu = zeros(length(mjd), 1);
