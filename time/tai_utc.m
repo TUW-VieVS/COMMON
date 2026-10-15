@@ -7,7 +7,7 @@ function [tmu,varargout]=tai_utc(mjd,varargin)
 % Input: mjd >= 41317 (1. Jan. 1972)[days, UTC]
 % Output: TAI-UTC [sec]
 
-% last leap second: 1.Jan 2009 (Bul. C 37)
+% last leap second: 1.Jan 2017 (Bul. C 52)
 
 % last update: Feb. 2009, L. Plank 
 %              May  2011, L. Plank: out of date actualized
@@ -23,18 +23,12 @@ function [tmu,varargout]=tai_utc(mjd,varargin)
 %                                            - new leap second added (2017-01-01: + 37 sec)
 %                                            - function revised, simplified and vectorized
 %              2017-09-11, L. McCallum: mjdmax changed to 2017-12-31
+%              2026-10-15, S. Böhm: Check for new leap second is deleted, the maximum value for UT1-UTC will be 1 hour from 20 May 2027 
+%                         (see Resolution C of the 28th meeting of the General Conference on Weights and Measures, 2026)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-% no announce for leap second
-mjdmax = modjuldat(2027,11,30,0);
 
 % init.:
 tmu = zeros(length(mjd), 1);
-
-% display warning if time of interest is after last leap second
-if mjd > mjdmax
-    disp('+++ please check for new leap second TAI-UTC tai_utc.m +++')
-end
 
 % for update add mjd of new leap second (1st value)
 leap_sec_epochs = [57754, 57204,56109,54832,53736,51179,50630,50083,49534,49169,48804,48257,...
